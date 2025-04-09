@@ -1,0 +1,25 @@
+body{background-color:floralwhite;}
+#image{height:350px;
+    width:270px;
+    
+    }
+    #d1{display: flex;
+    text-align: center;
+    font-size:18px;
+    }
+    #d2{position: absolute;
+    left:600px;
+    bottom:320px;
+font-size: 18px;}
+    #d3{height:38px;
+        width:270px;
+        border-radius: 9ch;
+    background-color: rgb(243, 243, 11);
+    text-align:center;
+    margin-top: 25px;
+    }
+    #purchase{text-decoration: none;
+    font-size:25px;
+    font-family:cursive;
+    color:black;
+    }

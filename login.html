@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        :root {
+    --border: 1px solid #ccc;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --black: #333;
+    --light-color: #777;
+}
+
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    transition: right 0.3s ease;
+}
+
+.login-form-container.active {
+    right: 0;
+}
+
+.login-form-container form {
+    background: #fff;
+    border: var(--border);
+    width: 30rem; /* Reduced width */
+    padding: 1.5rem; /* Reduced padding */
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    margin: 1.5rem; /* Reduced margin */
+}
+
+.login-form-container form h3 {
+    font-size: 2rem; /* Reduced font size */
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.login-form-container form span {
+    display: block;
+    font-size: 1.2rem; /* Reduced font size */
+    padding-top: 0.8rem; /* Reduced padding */
+}
+
+.login-form-container form .box {
+    width: 100%;
+    margin: 0.5rem 0; /* Reduced margin */
+    font-size: 1.4rem; /* Reduced font size */
+    border: var(--border);
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem; /* Reduced padding */
+    color: var(--black);
+    text-transform: none;
+}
+
+.login-form-container form .check-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 0; /* Reduced padding */
+}
+
+.login-form-container form .check-box label {
+    font-size: 1.2rem; /* Reduced font size */
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+.login-form-container form .btn {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0; /* Reduced margin */
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem; /* Reduced padding */
+    border-radius: 0.5rem;
+    font-size: 1.4rem; /* Reduced font size */
+    cursor: pointer;
+}
+
+.login-form-container form .btn:hover {
+    background: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="login-form-container active">
+        <form id="loginForm">
+            <h3>sign in</h3>
+            <span>email</span>
+            <input type="email" id="email" class="box" placeholder="enter your email" required>
+            <span>password</span>
+            <input type="password" id="password" class="box" placeholder="enter your password" required>
+            <div class="check-box">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forgot password ? <a href="#">click here</a></p>
+            <p>don't have an account ? <a href="#">create one</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("loginForm");
+
+            // On form submission
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the form from refreshing the page
+
+                // Get the values
+                const email = document.getElementById("email").value.trim();
+                const rememberMe = document.getElementById("remember-me").checked;
+
+                // Save to Local Storage
+                localStorage.setItem("email", email);
+                localStorage.setItem("rememberMe", rememberMe);
+
+                // Redirect to a different page
+                window.location.href = "dashboard.html"; // Change this to your target page
+            });
+
+            // Populate the email field if "remember me" was checked
+            const savedEmail = localStorage.getItem("email");
+            const isRemembered = localStorage.getItem("rememberMe") === "true";
+
+            if (isRemembered && savedEmail) {
+                document.getElementById("email").value = savedEmail;
+                document.getElementById("remember-me").checked = true;
+            }
+        });
+    </script>
+</body>
+</html>

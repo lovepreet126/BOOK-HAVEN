@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Your Feedback!</h1>
+        <div id="feedbackDetails"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get feedback data from Local Storage
+            const feedback = JSON.parse(localStorage.getItem("feedbackData"));
+
+            // Display feedback details
+            if (feedback) {
+                const feedbackDetails = `
+                    <p><strong>Name:</strong> ${feedback.name}</p>
+                    <p><strong>Email:</strong> ${feedback.email}</p>
+                    <p><strong>Rating:</strong> ${feedback.rating}</p>
+                    <p><strong>Comments:</strong> ${feedback.comments}</p>
+                `;
+                document.getElementById("feedbackDetails").innerHTML = feedbackDetails;
+            } else {
+                document.getElementById("feedbackDetails").innerHTML = "<p>No feedback data found.</p>";
+            }
+        });
+    </script>
+</body>
+</html>
