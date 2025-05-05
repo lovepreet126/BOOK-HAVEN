@@ -1,0 +1,67 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    background-color:#477eff;
+    color: white;
+    padding: 1.5em 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Main content styles */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info, .social-media, .working-hours {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color:#477eff;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Links */
+a {
+    color: #477eff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_one">
+            <a href="" class="logo"><i class="fas fa-book"></i> Book Haven</a>
+            <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="" class="fas fa-search"></label>
+            </form>
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+        </div>
+        <div class="header_two">
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <a href="#featured">Featured</a>
+                <a href="#arrivals">Arrivals</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#blogs">Blogs</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="">
+            <h3>Sign In</h3>
+            <span>Email</span>
+            <input type="email" class="box" placeholder="Enter your email">
+            <span>Password</span>
+            <input type="password" class="box" placeholder="Enter your password">
+            <div class="check-box">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <input type="submit" value="Sign In" class="btn">
+            <p>Forgot password? <a href="">Click here</a></p>
+            <p>Don't have an account? <a href="">Create one</a></p>
+        </form>
+    </div>
+
+    <!-- Home section -->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Up to 55% offers</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing at ad similique qui.</p>
+                <a href="" class="btn">Shop Now</a>
+            </div>
+            <div class="swiper books-list">
+                <div class="swiper-wrapper">
+                    <a href="" class="swiper-slide"><img class="image" src="https://m.media-amazon.com/images/I/814RhA2+2GL._SY466_.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img class="image" src="https://m.media-amazon.com/images/I/81RT+tXTtWL._SY466_.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img class="image" src="https://m.media-amazon.com/images/I/91CqNElQaKL._SY466_.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img class="image" src="https://m.media-amazon.com/images/I/61yHabNaQPL._SY466_.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img class="image" src="https://m.media-amazon.com/images/I/61USlIO6veL._SY466_.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img class="image" src="https://m.media-amazon.com/images/I/31PgDdt8uiL._SY445_SX342_.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icons section -->
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fas fa-plane"></i>
+            <div class="content">
+                <h3>Overpayment</h3>
+                <p>Overpayment $100</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>Secure Payment</h3>
+                <p>Secure payment methods</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>Customer Support</h3>
+                <p>24/7 support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured section -->
+    <section class="featured" id="featured">
+        <div class="heading"> <span>Featured Books</span></div>
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="" class="fas fa-search"></a>
+                        <a href="" class="fas fa-heart"></a>
+                        <a href="" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="https://m.media-amazon.com/images/I/61USlIO6veL._SY466_.jpg" alt="Tinker, Tailor, Schoolmum, Spy">
+                    </div>
+                    <div class="content">
+                        <h3>Featured Book</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="icons">
+                        <a href="" class="fas fa-search"></a>
+                        <a href="" class="fas fa-heart"></a>
+                        <a href="" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="https://m.media-amazon.com/images/I/81ExT8sUebL._SY466_.jpg" alt="Grandma's Bag of Stories">
+                    </div>
+                    <div class="content">
+                        <h3>Featured Book</h3>
+                        <div class="price">$15.99 <span>$20.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+                <!-- Add more books here as needed -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
