@@ -1,6 +1,6 @@
 name: Example Workflow
 on：
-  push:
+   push:
     branches:
       - main
 jobs:
